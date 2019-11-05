@@ -9,6 +9,7 @@ import org.eclipse.swt.custom.StackLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 public class window {
 
@@ -69,6 +70,7 @@ public class window {
 		Composite composite_2 = new Composite(shell, SWT.NONE);
 		
 		Button btnNewButton = new Button(composite_2, SWT.NONE);
+		btnNewButton.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
 		btnNewButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -79,6 +81,7 @@ public class window {
 		btnNewButton.setText("Back");
 		
 		Button btnNewButton_1 = new Button(composite_2, SWT.NONE);
+		btnNewButton_1.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		btnNewButton_1.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
