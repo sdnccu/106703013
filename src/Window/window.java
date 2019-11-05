@@ -15,6 +15,7 @@ public class window {
 	protected Shell shell;
 	private Composite Page_change;
 	private Back back;
+	private Top top;
 
 	/**
 	 * Launch the application.
@@ -56,6 +57,8 @@ public class window {
 		Page_change = new Composite(shell, SWT.NONE);
 		Page_change.setLayout(new StackLayout());
 		
+		top = new Top(Page_change, SWT.NONE);
+		
 		back = new Back(Page_change, SWT.NONE);
 		
 		Composite composite_1 = new Composite(shell, SWT.NONE);
@@ -90,12 +93,15 @@ public class window {
 	private void showBack()
 	{
 		StackLayout layout() = (StackLayout).this.Page_change.getLayout();
-		
+		layout.topControl=this.top;
+		this.Page_change.layout();
 		
 	}
 	
 	private void showNext()
 	{
-		StackLayout layout() = this.parent.getLayout();
+		StackLayout layout() = (StackLayout).this.Page_change.getLayout();
+		layout.topControl=this.Back;
+		this.Page_change.layout();
 	}
 }
