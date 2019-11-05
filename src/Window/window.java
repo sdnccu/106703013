@@ -92,16 +92,16 @@ public class window {
 	
 	private void showBack()
 	{
-		StackLayout layout() = (StackLayout).this.Page_change.getLayout();
-		layout.topControl=this.top;
+		StackLayout layout = (StackLayout)this.Page_change.getLayout();
+		layout.topControl=this.back;
 		this.Page_change.layout();
 		
 	}
 	
 	private void showNext()
 	{
-		StackLayout layout() = (StackLayout).this.Page_change.getLayout();
-		layout.topControl=this.Back;
+		StackLayout layout = (StackLayout)this.Page_change.getLayout();
+		layout.topControl=this.top;
 		this.Page_change.layout();
 	}
 }
